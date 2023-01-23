@@ -6,8 +6,15 @@ while(True):
         case "add":
             todo_list.append(input("Enter Value: "))
         case "show":
-            for item in todo_list:
-                print(item)
+            i = 0
+            while i < len(todo_list):
+                print(f"{i} : {todo_list[i]}")
+                i+=1
+        case "edit":
+            index=input("Enter index number of item you want to edit")
+            print(f"Existing Value: {todo_list[int(index)]}")
+            new_value = input("Enter new value")
+            todo_list[int(index)] = new_value
         case "exit":
             break
         case _:
